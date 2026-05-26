@@ -36,4 +36,18 @@ This case study focuses on repeatable AI assistant testing, batch evaluation, st
 
 [Read case study](case-studies/faq-processor-batch-evaluation.md)
 
+## Tech and workflow areas
+
+- Python
+- Streamlit
+- BigQuery
+- GCP
+- Telegram Bot API
+- Google Dialogflow CX
+- Mintlify Assistant API
+- CSV/JSON-based review workflows
+- Human-in-the-loop feedback
+- AI bot quality review
+- Batch testing and comparison
+- Content and prompt improvement workflows
 
