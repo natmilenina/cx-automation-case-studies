@@ -37,34 +37,3 @@ These case studies show how I approach internal tooling: start from a real opera
 
 The original tools were built for CX automation around AI-powered support systems, but the same patterns apply to other internal workflows where teams need to capture feedback, monitor issues, and prioritize improvements.
 
-## Public demos
-
-### Outlier Detection Workflow
-
-A Streamlit app for detecting unusual patterns in operational/support-style data and surfacing records that may need human review.
-
-This project demonstrates:
-- anomaly/outlier detection logic
-- operational monitoring thinking
-- Streamlit dashboarding
-- transforming raw data into reviewable signals
-
-Links:
-- [Live app](https://ai-support-outlier-monitoring.streamlit.app/)
-- [GitHub repo](https://github.com/natmilenina/ai-support-outlier-monitoring/)
-
-### RAG Playground
-
-A Streamlit app for experimenting with retrieval-augmented generation workflows, retrieval quality, source-grounded answers, and prompt behavior.
-
-This project demonstrates:
-- RAG workflow design
-- LLM API integration
-- prompt testing
-- retrieval debugging
-- answer quality evaluation
-
-Links:
-- [Live app](https://compare-rag-configurations.streamlit.app/)
-- GitHub repo: [add link]
-
