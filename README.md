@@ -26,6 +26,15 @@ This case study focuses on dashboard design, issue triage, BigQuery-backed analy
 
 [Read case study](case-studies/content-intelligence-dashboard.md)
 
+### Analytics Monitoring
+
+An automated monitoring workflow for detecting unusual changes in AI support conversation patterns, surfacing affected user questions, and generating AI-assisted summaries to speed up investigation and prioritisation.
+
+This case study focuses on support analytics, anomaly detection, quality monitoring, and proactive AI support improvement workflows.
+
+[View synthetic data demo](https://ai-support-outlier-monitoring.streamlit.app)
+
+
 ### FAQ Processor for Batch AI Assistant Evaluation
 
 A Streamlit-based tool for batch-testing FAQ-style questions across multiple AI assistants.
