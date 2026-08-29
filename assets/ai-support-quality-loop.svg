@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1740" viewBox="0 0 1400 1740" role="img" aria-labelledby="title desc">
+  <title id="title">Closed-loop AI support quality workflow</title>
+  <desc id="desc">Four quality signals feed a central Content Intelligence Dashboard for review and triage, followed by a decision, targeted actions, and validation. Validation feeds updated test cases, post-change behavior, and quality shifts back into the relevant quality signals. Project ownership is identified inside each component; arrows show operational hand-offs rather than necessarily automated integrations.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+    <marker id="feedback-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22A35A"/>
+    </marker>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.07"/>
+    </filter>
+    <style>
+      .font { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .title { font-size: 32px; font-weight: 600; fill: #0F172A; }
+      .section { font-size: 17px; font-weight: 600; fill: #334155; letter-spacing: 0.02em; }
+      .node-title { font-size: 19px; font-weight: 600; fill: #0F172A; }
+      .node-copy { font-size: 15px; font-weight: 400; fill: #64748B; }
+      .node-copy-compact { font-size: 13.25px; font-weight: 400; fill: #64748B; }
+      .node-copy-tight { font-size: 12.5px; font-weight: 400; fill: #64748B; }
+      .tag-copy { font-size: 12px; font-weight: 600; fill: #475569; letter-spacing: 0.015em; }
+      .edge-copy { font-size: 13px; font-weight: 500; fill: #475569; }
+      .feedback-copy { font-size: 13px; font-weight: 600; fill: #187A45; }
+      .disclaimer { font-size: 13px; font-weight: 400; font-style: italic; fill: #64748B; }
+      .edge { fill: none; stroke: #94A3B8; stroke-width: 2; marker-end: url(#arrow); }
+      .feedback { fill: none; stroke: #22A35A; stroke-width: 2.2; marker-end: url(#feedback-arrow); }
+      .node { stroke-width: 1.5; filter: url(#soft-shadow); }
+      .signal { fill: #F7FAFF; stroke: #C7D7FE; }
+      .hub { fill: #F5F3FF; stroke: #C4B5FD; stroke-width: 2; }
+      .decision { fill: #EFF6FF; stroke: #BFDBFE; }
+      .action { fill: #FFF7ED; stroke: #FED7AA; }
+      .validation { fill: #F0FDF4; stroke: #A7E7BE; stroke-width: 2; }
+      .tag { fill: #E9EEF5; }
+      .edge-label { fill: #FFFFFF; stroke: #E2E8F0; stroke-width: 1; }
+      .feedback-label { fill: #F0FDF4; stroke: #BBF7D0; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1740" fill="#FFFFFF"/>
+  <text x="60" y="58" class="font title">Closed-loop AI support quality workflow</text>
+
+  <rect x="60" y="100" width="1280" height="320" rx="24" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="90" y="142" class="font section">Quality signals</text>
+
+  <!-- Input paths: original Mermaid fan-in -->
+  <path class="edge" d="M 227.5 365 C 227.5 470, 500 490, 500 600"/>
+  <path class="edge" d="M 542.5 365 C 542.5 470, 620 500, 620 600"/>
+  <path class="edge" d="M 857.5 365 C 857.5 470, 780 500, 780 600"/>
+  <path class="edge" d="M 1172.5 365 C 1172.5 470, 900 490, 900 600"/>
+
+  <!-- Original Mermaid downstream chain -->
+  <path class="edge" d="M 700 770 L 700 850"/>
+  <path class="edge" d="M 700 1000 L 700 1080"/>
+  <path class="edge" d="M 700 1250 L 700 1325"/>
+
+  <!-- Original Mermaid feedback paths -->
+  <path class="feedback" d="M 520 1515 C 520 1640, 35 1640, 35 1510 L 35 267.5 L 90 267.5"/>
+  <path class="feedback" d="M 700 1515 C 700 1665, 360 1665, 360 1510 L 360 267.5 L 405 267.5"/>
+  <path class="feedback" d="M 880 1515 C 880 1640, 1365 1640, 1365 1510 L 1365 267.5 L 1310 267.5"/>
+
+  <!-- Quality-signal cards -->
+  <g>
+    <rect x="90" y="170" width="275" height="195" rx="18" class="node signal"/>
+    <rect x="110" y="190" width="124" height="28" rx="14" class="tag"/>
+    <text x="124" y="209" class="font tag-copy">FAQ Processor</text>
+    <text x="112" y="260" class="font node-title">Batch evaluation</text>
+    <text x="112" y="292" class="font node-copy-compact">Controlled, repeatable answer</text>
+    <text x="112" y="313" class="font node-copy-compact">comparisons across bot versions</text>
+  </g>
+
+  <g>
+    <rect x="405" y="170" width="275" height="195" rx="18" class="node signal"/>
+    <rect x="425" y="190" width="139" height="28" rx="14" class="tag"/>
+    <text x="439" y="209" class="font tag-copy">CID · BigQuery</text>
+    <text x="427" y="252" class="font node-title">Live support</text>
+    <text x="427" y="277" class="font node-title">conversations</text>
+    <text x="427" y="310" class="font node-copy-compact">BigQuery-backed conversations</text>
+    <text x="427" y="331" class="font node-copy-compact">reviewed without querying BigQuery</text>
+    <text x="427" y="352" class="font node-copy-tight">Dedicated knowledge-gap/issues tab</text>
+  </g>
+
+  <g>
+    <rect x="720" y="170" width="275" height="195" rx="18" class="node signal"/>
+    <rect x="740" y="190" width="148" height="28" rx="14" class="tag"/>
+    <text x="754" y="209" class="font tag-copy">Feedback · CID</text>
+    <text x="742" y="260" class="font node-title">Human review</text>
+    <text x="742" y="292" class="font node-copy-compact">Experts tag and annotate</text>
+    <text x="742" y="313" class="font node-copy-compact">problematic answers</text>
+  </g>
+
+  <g>
+    <rect x="1035" y="170" width="275" height="195" rx="18" class="node signal"/>
+    <rect x="1055" y="190" width="132" height="28" rx="14" class="tag"/>
+    <text x="1069" y="209" class="font tag-copy">Outlier Monitor</text>
+    <text x="1057" y="250" class="font node-title">Monitoring</text>
+    <text x="1057" y="281" class="font node-copy-compact">Volume or category shifts</text>
+    <text x="1057" y="302" class="font node-copy-compact">with affected-message examples</text>
+    <text x="1057" y="323" class="font node-copy-compact">LLM-assisted initial investigation</text>
+    <text x="1057" y="344" class="font node-copy-tight">Weekly Slack update → relevant teams</text>
+  </g>
+
+  <!-- Input edge labels -->
+  <g>
+    <rect x="139" y="446" width="177" height="34" rx="17" class="edge-label"/>
+    <text x="227.5" y="468" text-anchor="middle" class="font edge-copy">comparison results</text>
+  </g>
+  <g>
+    <rect x="467" y="446" width="151" height="34" rx="17" class="edge-label"/>
+    <text x="542.5" y="468" text-anchor="middle" class="font edge-copy">interaction data</text>
+  </g>
+  <g>
+    <rect x="752" y="446" width="211" height="34" rx="17" class="edge-label"/>
+    <text x="857.5" y="468" text-anchor="middle" class="font edge-copy">issue codes and notes</text>
+  </g>
+  <g>
+    <rect x="1058" y="446" width="229" height="34" rx="17" class="edge-label"/>
+    <text x="1172.5" y="468" text-anchor="middle" class="font edge-copy">anomalies and examples</text>
+  </g>
+
+  <!-- Central review and triage -->
+  <g>
+    <rect x="430" y="600" width="540" height="170" rx="20" class="node hub"/>
+    <rect x="454" y="624" width="249" height="30" rx="15" class="tag"/>
+    <text x="469" y="644" class="font tag-copy">Content Intelligence Dashboard</text>
+    <text x="458" y="719" class="font node-title">Central review and triage</text>
+  </g>
+
+  <!-- Decision -->
+  <g>
+    <rect x="460" y="850" width="480" height="150" rx="20" class="node decision"/>
+    <rect x="484" y="874" width="190" height="30" rx="15" class="tag"/>
+    <text x="499" y="894" class="font tag-copy">Human review workflow</text>
+    <text x="488" y="947" class="font node-title">Decision</text>
+    <text x="488" y="979" class="font node-copy">What is failing, how often, and why?</text>
+  </g>
+
+  <!-- Follow-up actions -->
+  <g>
+    <rect x="315" y="1080" width="770" height="170" rx="20" class="node action"/>
+    <rect x="339" y="1104" width="174" height="30" rx="15" class="tag"/>
+    <text x="354" y="1124" class="font tag-copy">Operational outcomes</text>
+    <text x="343" y="1178" class="font node-title">Follow-up actions</text>
+    <text x="343" y="1212" class="font node-copy">Content • prompts • routing • escalation or product follow-up</text>
+  </g>
+
+  <!-- Validation -->
+  <g>
+    <rect x="430" y="1325" width="540" height="190" rx="20" class="node validation"/>
+    <rect x="454" y="1349" width="292" height="30" rx="15" class="tag"/>
+    <text x="469" y="1369" class="font tag-copy">FAQ Processor · CID · Outlier Monitor</text>
+    <text x="458" y="1422" class="font node-title">Validation</text>
+    <text x="458" y="1454" class="font node-copy">Retest and monitor</text>
+    <text x="458" y="1481" class="font node-copy-compact">Check whether the change improved behaviour</text>
+    <text x="458" y="1504" class="font node-copy-compact">or introduced regressions</text>
+  </g>
+
+  <!-- Feedback labels -->
+  <g>
+    <rect x="53" y="1262" width="179" height="34" rx="17" class="feedback-label"/>
+    <text x="142.5" y="1284" text-anchor="middle" class="font feedback-copy">updated test cases</text>
+  </g>
+  <g>
+    <rect x="53" y="1204" width="217" height="34" rx="17" class="feedback-label"/>
+    <text x="161.5" y="1226" text-anchor="middle" class="font feedback-copy">post-change behavior</text>
+  </g>
+  <g>
+    <rect x="1174" y="1262" width="145" height="34" rx="17" class="feedback-label"/>
+    <text x="1246.5" y="1284" text-anchor="middle" class="font feedback-copy">quality shifts</text>
+  </g>
+
+  <text x="700" y="1708" text-anchor="middle" class="font disclaimer">Project ownership is shown inside each component. Arrows represent operational hand-offs, not necessarily automated integrations.</text>
+</svg>
