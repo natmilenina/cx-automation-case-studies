@@ -11,15 +11,6 @@ These case studies show how I approach internal tooling: start from a real opera
 
 The original tools were built for CX automation around AI-powered support systems, but the same patterns apply to other internal workflows where teams need to capture feedback, monitor issues, and prioritize improvements.
 
-## System map
-
-1. Capture support signals
-2. Evaluate AI answers
-3. Collect expert feedback
-4. Centralize review
-5. Prioritize fixes
-6. Monitor regressions and quality shifts
-
 ## Projects in the system
 
 | System layer | Project | What it does |
@@ -28,6 +19,10 @@ The original tools were built for CX automation around AI-powered support system
 | Human review | Expert Feedback Workflow | Lets experts flag bot issues in the tool they already use |
 | Triage | Content Intelligence Dashboard | Centralizes issues, knowledge gaps, feedback, and recurring query patterns |
 | Monitoring | Analytics Monitoring | Detects unusual shifts in support conversation patterns |
+
+## How the projects form one quality system
+
+[![Closed-loop AI support quality workflow](assets/ai-support-quality-loop.svg)](assets/ai-support-quality-loop.svg)
 
 ## Live demos
 
